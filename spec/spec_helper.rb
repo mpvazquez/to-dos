@@ -39,4 +39,9 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+
+  class ActionDispatch::IntegrationTest
+    # Make the Capybara DSL available in all integration tests
+    include Capybara::DSL
+  end
 end
